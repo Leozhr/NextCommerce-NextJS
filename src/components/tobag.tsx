@@ -37,7 +37,7 @@ export default function AddToBag({
         addItem(product), handleCartClick();
       }}
     >
-      Add To Cart
+      Adicionar ao carrinho
     </Button>
   );
 }

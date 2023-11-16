@@ -13,15 +13,14 @@ async function getData() {
 const Hero = async () => {
   const data = await getData()
   return (
-    <section className="mx-auto max-w-2xl mt-12 px-4 sm:pb-6 lg:max-w-7xl lg:px-8 lg:mt-20">
+    <section className="mx-auto max-w-2xl mt-10 px-4 sm:pb-4 lg:max-w-7xl lg:px-8 lg:mt-8">
       <div className="mb-8 flex flex-wrap justify-between md:mb-16">
         <div className="mb-6 flex w-full flex-col justify-center sm:mb-12 lg:mb-0 lg:w-1/3 lg:pb-24 lg:pt-48">
-          <h1 className="mb-4 text-4xl font-bold text-black sm:text-5xl md:mb-8 md:text-6xl">
-            Top Fashion for a top price!
+          <h1 className="mb-4 text-4xl font-semibold text-black sm:text-5xl md:mb-8 md:text-6xl">
+          Moda de alta qualidade por um preço premium!
           </h1>
           <p className="max-w-md leading-relaxed text-gray-500 xl:text-lg">
-            We sell only the most exclusive and high quality products for you.
-            We are the best so come and shop with us.
+          Oferecemos apenas produtos exclusivos e de alta qualidade para você. Somos os melhores, então venha fazer suas compras conosco.
           </p>
         </div>
 
@@ -56,19 +55,19 @@ const Hero = async () => {
             href="/men"
             className="flex w-1/3 items-center justify-center text-gray-500 transition duration-100 hover:bg-gray-100 active:bg-gray-200"
           >
-            Men
+            Homens
           </Link>
           <Link
             href="/women"
             className="flex w-1/3 items-center justify-center text-gray-500 transition duration-100 hover:bg-gray-100 active:bg-gray-200"
           >
-            Women
+            Mulheres
           </Link>
           <Link
             href="/teens"
             className="flex w-1/3 items-center justify-center text-gray-500 transition duration-100 hover:bg-gray-100 active:bg-gray-200"
           >
-            Teens
+            Crianças
           </Link>
         </div>
       </div>

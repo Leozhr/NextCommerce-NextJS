@@ -8,9 +8,9 @@ export default function CartProvider({ children }: { children: ReactNode }) {
     <USCProvider
       mode="payment"
       cartMode="client-only"
-      stripe={process.env.NEXT_PUBLIC_STRIPE_KEY as string}
-      successUrl="https://commerce-next-yt.vercel.app/stripe/success"
-      cancelUrl="https://commerce-next-yt.vercel.app/stripe/error"
+      stripe="pk_test_51NnYyQI4CXinvFtS5u6va44YGLVIbofzknU6afEtB3f60NGpuNDyBHFRbtEKFPqCbLDxu5qu6f1AHmdl073dpmC400KBzHnp1P"
+      successUrl="https://localhost:3000/stripe/success"
+      cancelUrl="https://localhost:3000/stripe/error"
       currency="USD"
       billingAddressCollection={false}
       shouldPersist={true}

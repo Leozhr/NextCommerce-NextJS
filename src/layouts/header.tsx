@@ -3,22 +3,23 @@ import { Button } from '@/components/ui/button'
 import { ShoppingBag } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useShoppingCart } from 'use-shopping-cart'
 
 const links = [
-  { name: 'Home', href: '/' },
-  { name: 'Men', href: '/men' },
-  { name: 'Women', href: '/women' },
-  { name: 'Teens', href: '/teens' },
+  { name: 'Pagina Inicial', href: '/' },
+  { name: 'Homens', href: '/men' },
+  { name: 'Mulheres', href: '/women' },
 ]
 
 const Header = () => {
   const pathname = usePathname()
+  const { handleCartClick } = useShoppingCart();
 
   return (
     <header className="mb-8 border-b">
-      <div className="flex items-center justify-between mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl">
+      <div className="flex items-center justify-between mx-auto max-w-2xl px-4 py-2 sm:px-6 lg:max-w-7xl lg:py-0">
         <Link href="/">
-          <h1 className="text-1xl md:text-3xl font-bold">
+          <h1 className="text-2xl md:text-3xl font-bold">
             Next<span className="text-primary">Commerce</span>
           </h1>
         </Link>
@@ -49,10 +50,11 @@ const Header = () => {
           <Button
             variant="default"
             className="flex flex-col gap-y-1.5 h-12 w-12 sm:h-20 sm:w-20 md:h-24 md:w-24 rounded-none"
+            onClick={() => handleCartClick()}
           >
             <ShoppingBag size={24} />
             <span className="hidden text-xs font-semibold text-white sm:block">
-              Cart
+              Carrinho
             </span>
           </Button>
         </div>

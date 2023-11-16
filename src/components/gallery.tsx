@@ -26,6 +26,7 @@ const Gallery = ({ images }: iAppProps) => {
               alt="photo"
               className="h-full w-full object-cover object-center cursor-pointer"
               onClick={() => handleSmallImageClick(image)}
+              priority={true}
             />
           </div>
         ))}
@@ -38,6 +39,7 @@ const Gallery = ({ images }: iAppProps) => {
           width={500}
           height={500}
           className="h-full w-full object-cover object-center"
+          priority={true}
         />
 
         <span className="absolute left-0 top-0 rounded-br-lg bg-red-500 px-3 py-1.5 text-sm uppercase tracking-wider text-white">
